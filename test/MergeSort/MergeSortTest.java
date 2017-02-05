@@ -57,4 +57,18 @@ public class MergeSortTest {
         MergeSort.sort(ar, 0, ar.length - 1);
         assertArrayEquals(new int[]{-99,-97,-56,-43,-31,-1,0,4,32,434}, ar);
     }
+
+    @Test
+    public void sortSingleValue() throws Exception {
+        int[] ar = {22};
+        MergeSort.sort(ar, 0, ar.length - 1);
+        assertArrayEquals(new int[]{22}, ar);
+    }
+
+    @Test
+    public void sortNoValue() throws Exception {
+        int[] ar = {};
+        MergeSort.sort(ar, 0, ar.length - 1);
+        assertArrayEquals(new int[]{}, ar);
+    }
 }
